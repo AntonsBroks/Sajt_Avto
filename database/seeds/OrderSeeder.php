@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Order;
 class OrderSeeder extends Seeder
 {
     /**
@@ -11,6 +11,6 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Order::truncate();
     }
 }

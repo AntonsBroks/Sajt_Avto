@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
-use App\Car;
 use App\Order;
-use Illuminate\Support\Facades\Auth;
-
-class OrderController extends Controller
+use App\Car;
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +14,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $user_id = Auth::id();
        $orders = Order::all();
        $cars = Car::all();
-       return view('order_show', array('user_id' => $user_id, 'orders' => $orders, 'cars'=>$cars));
-
+       return view('users-orders', array( 'orders' => $orders, 'cars'=>$cars));
     }
 
     /**
@@ -29,10 +24,9 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
-        $car=Car::find($id);
-        return view('order_create', ['car'=> $car]);
+        //
     }
 
     /**
@@ -43,38 +37,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $rules = array(
-            'name' => 'required|string|min:2|max:50',
-            'surname' => 'required|string|min:2|max:50',
-            'address' => 'required|string|min:2|max:100',
-            'phone' => 'required|integer',
-        );        
-        $this->validate($request, $rules); 
-        
-        $order = new Order();
-        $order->users_id = Auth::id();
-        
-        $name = $request->name;
-        $surname = $request->surname;
-        $address = $request->address;
-        $phone = $request->phone;
-
-        $order->name = $name;
-        $order->surname = $surname;
-        $order->adress = $address;
-        $order->phone = $phone;
-
-        $car_id=$request->car;
-        $car = Car::find($car_id);
-        $order->total_cost=$car->price;
-        $order->cars_id=$car->id;
-        $order->date=now();
-
-        $order->save();
-
-
-        return back()->with('success', 'Your order successfully done!');
+        //
     }
 
     /**
@@ -83,9 +46,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-       
+        //
     }
 
     /**

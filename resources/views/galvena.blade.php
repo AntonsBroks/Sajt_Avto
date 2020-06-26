@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
+@section('content')
 
-<head>
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet" type="text/css" >
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title>
-        Auto Veikals
-    </title>
-</head>
 
-<body background="img/8.png">
-    <div class="navbar">
-        <a href="#">Light Cars</a>
-        <a href="#">Buses</a>
-        <a href="#">Jeeps</a>
-        <a href="#" class="right">Registration</a>
-        <a href="#" class="right">Login</a>
-        <a href="#" class="right">Info</a>
-      </div>
+    
     <div id="class all">
         <input checked type="radio" name="respond"  id="desktop">
         <article id="slider">
@@ -38,7 +23,7 @@
                         <article><img src="img/5.jpg" width="200" height="350"></article>
                         <article><img src="img/6.jpeg" width="200" height="350"></article>
                     </div>
-                    <div class="container">
+                    <div class="container2">
                         <img src="" style="width:100%;">
                         <div class="text-block">
                           <h4>Mercedes-Benz</h4>
@@ -105,25 +90,25 @@
             <div class="pirkums">
                  <img style="position: relative; padding-left:10%;" src="img/9.png" width="300" height="150">
                 <div class="pirkums_info">
-                <a type="button" class="pirkt" href="{{ action('OrderController@create', 1)}}">Buy</a>
+                <a type="button" class="pirkt" href="{{ action('OrderController@create', 3)}}">Buy</a>
                 </div>
             </div>
             <div class="pirkums">
                  <img style="position: relative;padding-left:10%; " src="img/10.PNG" width="303" height="150">
                  <div class="pirkums_info">
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 2)}}">Buy</a>
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 4)}}">Buy</a>
                  </div>
             </div>
             <div class="pirkums">
                 <img style="position: relative;padding-left:10%;" src="img/11.PNG" width="303" height="150">
                 <div class="pirkums_info">
-                <a type="button" class="pirkt" href="{{ action('OrderController@create', 3)}}">Buy</a>
+                <a type="button" class="pirkt" href="{{ action('OrderController@create', 1)}}">Buy</a>
                  </div>
             </div>
             <div class="pirkums">
                  <img style="position: relative;padding-left:10%; " src="img/12.PNG" width="310" height="150">
                  <div class="pirkums_info">
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 4)}}">Buy</a>
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 2)}}">Buy</a>
                  </div>
             </div>
          </div>
@@ -145,7 +130,7 @@
             <div class="pirkums">
                  <img style="position: relative;padding-left:10%; " src="img/14.PNG" width="303" height="150">
                  <div class="pirkums_info">
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 6)}}">Buy</a>
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 8)}}">Buy</a>
                  </div>
             </div>
             <div class="pirkums">
@@ -155,9 +140,9 @@
                  </div>
             </div>
             <div class="pirkums">
-                 <img style="position: relative;padding-left:10%; " src="img/16.PNG" width="310" height="150">
+                 <img style="position: relative;padding-left:10%; " src="img/17.PNG" width="310" height="150">
                  <div class="pirkums_info">
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 8)}}">Buy</a>
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 6)}}">Buy</a>
                  </div>
             </div>
     </div>
@@ -170,27 +155,27 @@
       <br>
       <br>
       <div class="pirkums">
-                 <img style="position: relative; padding-left:10%;" src="img/17.png" width="300" height="150">
+                 <img style="position: relative; padding-left:10%;" src="img/21.PNG" width="300" height="150">
                 <div class="pirkums_info">
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 9)}}">Buy</a>
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 10)}}">Buy</a>
                 </div>
             </div>
             <div class="pirkums">
                  <img style="position: relative;padding-left:10%; " src="img/18.PNG" width="303" height="150">
                  <div class="pirkums_info">
-                 <a  type="button" class="pirkt" href="{{ action('OrderController@create', 10)}}">Buy</a>
+                 <a  type="button" class="pirkt" href="{{ action('OrderController@create', 11)}}">Buy</a>
                  </div>
             </div>
             <div class="pirkums">
                 <img style="position: relative;padding-left:10%;" src="img/19.PNG" width="303" height="150">
                 <div class="pirkums_info">
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 11)}}" >Buy</a>
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 12)}}" >Buy</a>
                  </div>
             </div>
             <div class="pirkums">
                  <img style="position: relative;padding-left:10%; " src="img/20.PNG" width="310" height="150">
                  <div class="pirkums_info">
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 12)}}" >Buy</a>
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 9)}}" >Buy</a>
                  </div>
             </div>
     </div>
@@ -203,30 +188,30 @@
       <br>
       <br>
       <div class="pirkums">
-                 <img style="position: relative; padding-left:10%;" src="img/21.png" width="300" height="150">
+                 <img style="position: relative; padding-left:10%;" src="img/25.PNG" width="300" height="150">
                 <div class="pirkums_info">
-                <a type="button" class="pirkt" href="{{ action('OrderController@create', 13)}}" >Buy</a>
+                <a type="button" class="pirkt" href="{{ action('OrderController@create', 14)}}" >Buy</a>
                 </div>
             </div>
             <div class="pirkums">
                  <img style="position: relative;padding-left:10%; " src="img/22.PNG" width="303" height="150">
                  <div class="pirkums_info">
-                 <a class="pirkt" >Buy</a>
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 14)}}" >Buy</a>
+                 
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 15)}}" >Buy</a>
                  </div>
             </div>
             <div class="pirkums">
                 <img style="position: relative;padding-left:10%;" src="img/23.PNG" width="303" height="150">
                 <div class="pirkums_info">
-                 <a class="pirkt" >Buy</a>
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create',15)}}" >Buy</a>
+                 
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create',16)}}" >Buy</a>
                  </div>
             </div>
             <div class="pirkums">
                  <img style="position: relative;padding-left:10%; " src="img/24.PNG" width="310" height="150">
                  <div class="pirkums_info">
-                 <a class="pirkt" >Buy</a>
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 16)}}" >Buy</a>
+                 
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 13)}}" >Buy</a>
                  </div>
             </div>
     </div>
@@ -241,27 +226,27 @@
       <br>
       <br>
       <div class="pirkums">
-                 <img style="position: relative; padding-left:10%;" src="img/25.png" width="300" height="150">
+                 <img style="position: relative; padding-left:10%;" src="img/29.PNG" width="300" height="150">
                 <div class="pirkums_info">
-                <a type="button" class="pirkt" href="{{ action('OrderController@create', 17)}}" >Buy</a>
+                <a type="button" class="pirkt" href="{{ action('OrderController@create', 18)}}" >Buy</a>
                 </div>
             </div>
             <div class="pirkums">
                  <img style="position: relative;padding-left:10%; " src="img/26.PNG" width="303" height="150">
                  <div class="pirkums_info">
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 18)}}" >Buy</a>
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 19)}}" >Buy</a>
                  </div>
             </div>
             <div class="pirkums">
                 <img style="position: relative;padding-left:10%;" src="img/27.PNG" width="303" height="150">
                 <div class="pirkums_info">
-                <a type="button" class="pirkt" href="{{ action('OrderController@create', 19)}}" >Buy</a>
+                <a type="button" class="pirkt" href="{{ action('OrderController@create', 20)}}" >Buy</a>
                  </div>
             </div>
             <div class="pirkums">
                  <img style="position: relative;padding-left:10%; " src="img/28.PNG" width="310" height="150">
                  <div class="pirkums_info">
-                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 20)}}" >Buy</a>
+                 <a type="button" class="pirkt" href="{{ action('OrderController@create', 17)}}" >Buy</a>
                  </div>
             </div>
     </div>
@@ -303,6 +288,4 @@
         <p>antonbroks@inbox.lv</p>
       </div>
     
-</body>
-
-</html>
+@endsection

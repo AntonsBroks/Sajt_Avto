@@ -3,7 +3,6 @@
 use Illuminate\Database\Seeder;
 use App\Car;
 
-
 class CarSeeder extends Seeder
 {
     /**
@@ -14,6 +13,7 @@ class CarSeeder extends Seeder
     public function run()
     {
         Car::truncate();
+
         Car::create(array('id' => 1,'model' => 'E klase','color' => 'grey','mileage' => 3000,'price' => '54000','year' => '2020','automatic'=>'1','condition'=>'Excellent - A close to perfect original'));
         Car::create(array('id' => 2,'model' => 'E klase','color' => 'black','mileage' => 14000,'price' => '30000','year' => '2016','automatic'=>'0','condition'=>'Excellent - A close to perfect original'));
         Car::create(array('id' => 3,'model' => 'E klase','color' => 'black','mileage' => 7000,'price' => '35000','year' => '2020','automatic'=>'1','condition'=>'Fair condition - Runs and drives OK but needs repair'));

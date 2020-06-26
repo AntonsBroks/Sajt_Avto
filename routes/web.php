@@ -21,7 +21,20 @@ Auth::routes();
 //Route::redirect('/', 'Car');
 //Route::resource('Car','CarController');
 
+
+
+
 Route::redirect('/', 'galvena');
 Route::resource('galvena','CarController');
 
+Route::get('/home', 'CarController@index')->name('home');
+Route::get('/user-orders', 'OrderController@index');
+Route::get('/users-orders', 'AdminController@index');
+
 Route::get('/{id?}', 'OrderController@create');
+
+Auth::routes();
+
+
+
+Route::post('/orders','OrderController@store');
